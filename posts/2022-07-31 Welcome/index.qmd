@@ -1,6 +1,6 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+author: "Andrew Yule"
 date: "2022-07-31"
 categories: [news]
 ---

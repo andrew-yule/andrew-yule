@@ -3,7 +3,9 @@ project:
 
 website:
   title: "Andrew Yule"
-  search: false
+  search:
+    location: navbar
+    type: overlay
   navbar:
     left:
       - href: index.qmd
