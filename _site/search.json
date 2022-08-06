@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Andrew Yule",
     "section": "",
-    "text": "news\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2022\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 1, 2022\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 31, 2022\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nEnergy\n\n\nPython\n\n\nVisualization\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2018\n\n\nAndrew Yule\n\n\n\n\n\n\nNo matching items"
+    "text": "WolframLanguage\n\n\nStatistics\n\n\nSports\n\n\n\n\n\n\n\n\n\n\n\nJun 3, 2021\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nEnergy\n\n\nPython\n\n\nVisualization\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2018\n\n\nAndrew Yule\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -30,14 +30,14 @@
   {
     "objectID": "About.html",
     "href": "About.html",
-    "title": "About",
+    "title": "Andrew Yule",
     "section": "",
-    "text": "This is the contents of the about page for my blog."
+    "text": "Code\n\nggplot (for Wolfram Language): This is a Wolfram Language implementation of the popular R package called ggplot. It’s one of my favorite side projects, but unfortunately I don’t get as much time to work on it as I would like.\nwl2md: Converts a Mathematica notebook into a Markdown notebook. It’s essentially a re-write of the m2md package (link), as I wanted a little more control over the code base and implementation.\nandrew-yule: Repository for the majority of the content that makes up this website.\n\n\n\nPublications and Presentations\n\nPSIG 2021 Conference, A Novel Approach for Pump Timing Optimization\nEngineering Alex: A Centralized System for Petroleum Production Analytics\nggplot: A Grammar of Graphics for the Wolfram Language\nWolfram Language for Application Development: How to Take Full Advantage of NETLink`\nLessons Learned from Application Development with the Wolfram Language\n\n\n\nLinks\n\nLinkedIn\nTwitter\nGithub"
   },
   {
     "objectID": "Contact.html",
     "href": "Contact.html",
-    "title": "Contact",
+    "title": "Andrew Yule",
     "section": "",
     "text": "About this blog"
   },
@@ -110,5 +110,12 @@
     "title": "Utilizing technology to give operators better insights",
     "section": "Looking ahead",
     "text": "Looking ahead\nOur heat map technology has been in development for over a year, but has now reached a very mature state. We’re able to adapt the technology to all kinds of field data and simulation engines, allowing us to leverage it on all of our projects. We believe the resulting simple and intuitive visuals provide huge insights for operators seeking to gain a better understanding of their field or what conditions may look like if changes are made.\nAs we look ahead to the future, we see a great potential to help operators even further by deploying our technology to employees on the ground in real time to help diagnose issues as they occur."
+  },
+  {
+    "objectID": "posts/2021-06-03 Riddler perfect game/index.html",
+    "href": "posts/2021-06-03 Riddler perfect game/index.html",
+    "title": "On-Base Percentage For a Certain Number of Perfect Games",
+    "section": "",
+    "text": "I always enjoy reading the weekly Riddler puzzles from 538 (link). My background is not in statistics, but I enjoy the puzzles because they’re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it’s even better.Here’s the Riddler express from June 3rd 2021 discussing baseball perfect games:\n\n\n\n\n\n “How low would a batter’s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)”\n\n\n\n\n\n My preferred computational tool is the Wolfram Language so I’ll take a stab at solving this Riddler using it. \n\n\n\n\n\n First, let’s define some global constants based on what we are allowed to assume.\n\n\n\n\n\n \n\n\n\n Now, my preferred approach to a lot of these statistically based Riddler’s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. \n\n\n\n\n\n \n\n\n\n Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.\n\n\n\n\n\n \n\n\n\n \n\n\n\n Simulating each season multiple times for various on-base averages let’s us see how the number of predicted perfect games in a season varies.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season\n\n\n\n\n\n \n\n\n\n \n\n\n\n\n\n\n \n  Created with the Wolfram Language"
   }
 ]

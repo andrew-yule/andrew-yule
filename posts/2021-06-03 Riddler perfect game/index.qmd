@@ -1,0 +1,9 @@
+---
+title: "On-Base Percentage For a Certain Number of Perfect Games"
+author: "Andrew Yule"
+date: "2021-06-03"
+categories: [WolframLanguage, Statistics, Sports]
+format: 
+    html: 
+        include-before-body: "2021-06-03 Riddler Perfect Game.htm"
+---

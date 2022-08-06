@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Andrew Yule - About</title>
+<title>Andrew Yule – about</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -28,6 +28,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -109,40 +110,44 @@ ul.task-list{list-style: none;}
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<section id="about-this-blog" class="level2">
-<h2 data-anchor-id="about-this-blog">About this blog</h2>
-<p>This is the contents of the about page for my blog.</p>
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="about-me" class="level4">
+<h4 class="anchored" data-anchor-id="about-me">About me</h4>
+<p>I’m a chemical engineer with over 10 years of experience working in the oil and gas industry. My professional interests include flow assurance, data science, statistics, and programming in the Wolfram Language and Python. My personal interests include college football, physical fitness, and cooking.</p>
+</section>
+<section id="code" class="level4">
+<h4 class="anchored" data-anchor-id="code">Code</h4>
+<ul>
+<li><a href="https://github.com/ayule89/ggplot">ggplot</a> (for Wolfram Language): This is a Wolfram Language implementation of the popular R package called ggplot. It’s one of my favorite side projects, but unfortunately I don’t get as much time to work on it as I would like.</li>
+<li><a href="https://github.com/ayule89/wl2md">wl2md</a>: Converts a Mathematica notebook into a Markdown notebook. It’s essentially a re-write of the m2md package (<a href="https://github.com/kubaPod/M2MD">link</a>), as I wanted a little more control over the code base and implementation.</li>
+<li><a href="https://github.com/ayule89/andrew-yule">andrew-yule</a>: Repository for the majority of the content that makes up this website.</li>
+</ul>
+</section>
+<section id="publications-and-presentations" class="level4">
+<h4 class="anchored" data-anchor-id="publications-and-presentations">Publications and Presentations</h4>
+<ul>
+<li><a href="https://onepetro.org/PSIGAM/proceedings-abstract/PSIG21/All-PSIG21/PSIG-2105/463593">PSIG 2021 Conference, A Novel Approach for Pump Timing Optimization</a></li>
+<li><a href="https://www.wolfram.com/customer-stories/centralized-system-petroleum-production-analytics.html">Engineering Alex: A Centralized System for Petroleum Production Analytics</a></li>
+<li><a href="https://www.youtube.com/watch?v=6dmKX_G4MBs">ggplot: A Grammar of Graphics for the Wolfram Language</a></li>
+<li><a href="https://www.youtube.com/watch?v=4kmJRv8wrl4">Wolfram Language for Application Development: How to Take Full Advantage of NETLink`</a></li>
+<li><a href="https://www.youtube.com/watch?v=gKOfyGut59s">Lessons Learned from Application Development with the Wolfram Language</a></li>
+</ul>
+</section>
+<section id="links" class="level4">
+<h4 class="anchored" data-anchor-id="links">Links</h4>
+<ul>
+<li><a href="https://www.linkedin.com/in/andrew-yule-58571b5b/">LinkedIn</a></li>
+<li><a href="https://twitter.com/ayule89">Twitter</a></li>
+<li><a href="https://github.com/ayule89">Github</a></li>
+</ul>
 
 
 </section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com" class="about-link">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -163,6 +168,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

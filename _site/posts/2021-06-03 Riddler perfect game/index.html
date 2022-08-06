@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andrew Yule">
+<meta name="dcterms.date" content="2021-06-03">
+
+<title>Andrew Yule - On-Base Percentage For a Certain Number of Perfect Games</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Andrew Yule</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">Posts</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../About.html">About</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Contact.html">Contact</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ayule89/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/ayule89"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ayule89"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">On-Base Percentage For a Certain Number of Perfect Games</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">WolframLanguage</div>
+                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Sports</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Andrew Yule </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 3, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+<!--?xml version="1.0" encoding="UTF-8"?-->
+
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+
+
+ <title>
+  2021-06-03 Riddler Perfect Game
+ </title>
+ <link href="HTMLFiles/2021-06-03 Riddler Perfect Game.css" rel="stylesheet" type="text/css">
+
+
+
+
+<p class="Text">
+ I always enjoy reading the weekly Riddler puzzles from 538 (<span><a href="https://fivethirtyeight.com/tag/the-riddler"><span class="HyperlinkInline">link</span></a></span>). My background is not in statistics, but I enjoy the puzzles because they’re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it’s even better.<br><br>Here’s the Riddler express from June 3rd 2021 discussing baseball perfect games:
+</p>
+
+
+
+<p class="Abstract">
+ <span style="font-style: italic;">“How low would a batter’s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)”</span>
+</p>
+
+
+
+<p class="Text">
+ My preferred computational tool is the Wolfram Language so I’ll take a stab at solving this Riddler using it. 
+</p>
+
+
+
+<p class="Text">
+ First, let’s define some global constants based on what we are allowed to assume.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_1.gif" alt="2021-06-03 Riddler Perfect Game_1.gif" width="403" height="102" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Now, my preferred approach to a lot of these statistically based Riddler’s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.<br><br>So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_2.png" alt="2021-06-03 Riddler Perfect Game_2.png" width="633" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.<br><br>RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_3.png" alt="2021-06-03 Riddler Perfect Game_3.png" width="242" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_4.png" alt="2021-06-03 Riddler Perfect Game_4.png" width="555" height="207" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Simulating each season multiple times for various on-base averages let’s us see how the number of predicted perfect games in a season varies.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_5.png" alt="2021-06-03 Riddler Perfect Game_5.png" width="666" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_6.png" alt="2021-06-03 Riddler Perfect Game_6.png" width="852" height="81" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_7.png" alt="2021-06-03 Riddler Perfect Game_7.png" width="728" height="102" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_8.gif" alt="2021-06-03 Riddler Perfect Game_8.gif" width="500" height="243" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_9.png" alt="2021-06-03 Riddler Perfect Game_9.png" width="497" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_10.png" alt="2021-06-03 Riddler Perfect Game_10.png" width="165" height="17" style="vertical-align:middle">
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

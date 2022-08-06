@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  2021-06-03 Riddler Perfect Game
+ </title>
+ <link href="HTMLFiles/2021-06-03 Riddler Perfect Game.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Text">
+ I always enjoy reading the weekly Riddler puzzles from 538 (<span><a href="https://fivethirtyeight.com/tag/the-riddler"><span class="HyperlinkInline">link</span></a></span>). My background is not in statistics, but I enjoy the puzzles because they&rsquo;re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it&rsquo;s even better.<br /><br />Here&rsquo;s the Riddler express from June 3rd 2021 discussing baseball perfect games:
+</p>
+
+
+
+<p class="Abstract">
+ <span style='font-style: italic;'>&ldquo;How low would a batter&rsquo;s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)&rdquo;</span>
+</p>
+
+
+
+<p class="Text">
+ My preferred computational tool is the Wolfram Language so I&rsquo;ll take a stab at solving this Riddler using it. 
+</p>
+
+
+
+<p class="Text">
+ First, let&rsquo;s define some global constants based on what we are allowed to assume.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_1.gif" alt="2021-06-03 Riddler Perfect Game_1.gif" width="403" height="102" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now, my preferred approach to a lot of these statistically based Riddler&rsquo;s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.<br /><br />So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_2.png" alt="2021-06-03 Riddler Perfect Game_2.png" width="633" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.<br /><br />RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_3.png" alt="2021-06-03 Riddler Perfect Game_3.png" width="242" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_4.png" alt="2021-06-03 Riddler Perfect Game_4.png" width="555" height="207" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Simulating each season multiple times for various on-base averages let&rsquo;s us see how the number of predicted perfect games in a season varies.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_5.png" alt="2021-06-03 Riddler Perfect Game_5.png" width="666" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_6.png" alt="2021-06-03 Riddler Perfect Game_6.png" width="852" height="81" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_7.png" alt="2021-06-03 Riddler Perfect Game_7.png" width="728" height="102" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_8.gif" alt="2021-06-03 Riddler Perfect Game_8.gif" width="500" height="243" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_9.png" alt="2021-06-03 Riddler Perfect Game_9.png" width="497" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_10.png" alt="2021-06-03 Riddler Perfect Game_10.png" width="165" height="17" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

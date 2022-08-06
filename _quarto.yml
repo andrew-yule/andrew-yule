@@ -10,8 +10,10 @@ website:
     left:
       - href: index.qmd
         text: "Posts" 
-      - About.qmd
-      - Contact.qmd
+      - href: About.qmd
+        text: "About"
+      - href: Contact.qmd
+        text: "Contact"
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/ayule89/
@@ -23,6 +25,3 @@ format:
   html:
     theme: litera
     css: styles.css
-
-
-

@@ -1,9 +1,0 @@
----
-title: "Post With Code"
-author: "Andrew Yule"
-date: "2022-08-01"
-categories: [news, code, analysis]
-image: "image.jpg"
----
-
-This is a post with executable code.
