@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andrew Yule">
-<meta name="dcterms.date" content="2021-06-03">
+<meta name="dcterms.date" content="2021-06-25">
 <meta name="description" content="test">
 
-<title>Andrew Yule - On-Base Percentage For a Certain Number of Perfect Games</title>
+<title>Andrew Yule - When to hang up the cards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">On-Base Percentage For a Certain Number of Perfect Games</h1>
+      <h1 class="title">When to hang up the cards</h1>
                   <div>
         <div class="description">
           test
@@ -120,7 +120,6 @@ ul.task-list{list-style: none;}
                           <div class="quarto-categories">
                 <div class="quarto-category">WolframLanguage</div>
                 <div class="quarto-category">Statistics</div>
-                <div class="quarto-category">Sports</div>
               </div>
                   </div>
   </div>
@@ -138,7 +137,7 @@ ul.task-list{list-style: none;}
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 3, 2021</p>
+        <p class="date">June 25, 2021</p>
       </div>
     </div>
       
@@ -159,99 +158,91 @@ ul.task-list{list-style: none;}
 
 
  <title>
-  2021-06-03 Riddler Perfect Game
+  2021-06-25 When to hang up the cards
  </title>
- <link href="HTMLFiles/2021-06-03 Riddler Perfect Game.css" rel="stylesheet" type="text/css">
+ <link href="HTMLFiles/2021-06-25 When to hang up the cards.css" rel="stylesheet" type="text/css">
 
 
 
 
 <p class="Text">
- I always enjoy reading the weekly Riddler puzzles from 538 (<span><a href="https://fivethirtyeight.com/tag/the-riddler"><span class="HyperlinkInline">link</span></a></span>). My background is not in statistics, but I enjoy the puzzles because they’re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it’s even better.<br><br>Here’s the Riddler express from June 3rd 2021 discussing baseball perfect games:
-</p>
-
-
-
-<p class="Abstract">
- <span style="font-style: italic;">“How low would a batter’s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)”</span>
+ This week’s riddler was too interesting to pass up:<br><br>“Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth its face value in points, while the ace counts for 1 point. To play a game, you shuffle the cards so they are randomly ordered, and then turn them over one by one. You start with 0 points, and as you flip over each card your score increases by that card’s points — as long as the joker hasn’t shown up. The moment the joker appears, the game is over and your score is 0. The key is that you can stop any moment and walk away with a nonzero score.<br><br>What strategy maximizes your expected number of points?”
 </p>
 
 
 
 <p class="Text">
- My preferred computational tool is the Wolfram Language so I’ll take a stab at solving this Riddler using it. 
-</p>
-
-
-
-<p class="Text">
- First, let’s define some global constants based on what we are allowed to assume.
+ As always, I like to solve these kinds of problems using simulation because it shows just how powerful computational approaches can be.<br><br>Let’s start first by creating the deck of cards and then we’ll run a bunch of “simulations” by taking a random order of the cards many times.
 </p>
 
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_1.gif" alt="2021-06-03 Riddler Perfect Game_1.gif" width="403" height="102" style="vertical-align:middle">
-</p>
-
-<p class="Text">
- Now, my preferred approach to a lot of these statistically based Riddler’s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.<br><br>So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. 
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_2.png" alt="2021-06-03 Riddler Perfect Game_2.png" width="633" height="17" style="vertical-align:middle">
-</p>
-
-<p class="Text">
- Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.<br><br>RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_3.png" alt="2021-06-03 Riddler Perfect Game_3.png" width="242" height="17" style="vertical-align:middle">
-</p>
-
-<p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_4.png" alt="2021-06-03 Riddler Perfect Game_4.png" width="555" height="207" style="vertical-align:middle">
-</p>
-
-<p class="Text">
- Simulating each season multiple times for various on-base averages let’s us see how the number of predicted perfect games in a season varies.
-</p>
-
-
-
-<p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_5.png" alt="2021-06-03 Riddler Perfect Game_5.png" width="666" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_1.png" alt="2021-06-25 When to hang up the cards_1.png" width="254" height="17" style="vertical-align:middle">
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_6.png" alt="2021-06-03 Riddler Perfect Game_6.png" width="852" height="81" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_2.png" alt="2021-06-25 When to hang up the cards_2.png" width="242" height="17" style="vertical-align:middle">
 </p>
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_7.png" alt="2021-06-03 Riddler Perfect Game_7.png" width="728" height="102" style="vertical-align:middle">
-</p>
-
-<p class="Output">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_8.gif" alt="2021-06-03 Riddler Perfect Game_8.gif" width="500" height="243" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_3.png" alt="2021-06-25 When to hang up the cards_3.png" width="384" height="17" style="vertical-align:middle">
 </p>
 
 <p class="Text">
- And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season
+ Next, let’s create a helper function to count of score for the given hand assuming we were to stop at anywhere from 1 - 11, noting however, that if we hit a “J” in one of our hands, we will then get a 0 score for that hand and number of cards combination.
 </p>
 
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_9.png" alt="2021-06-03 Riddler Perfect Game_9.png" width="497" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_4.png" alt="2021-06-25 When to hang up the cards_4.png" width="596" height="60" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Next, apply our helper function to the simulations and merge the results for the various number of cards dealt taking the average score.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_5.png" alt="2021-06-25 When to hang up the cards_5.png" width="273" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_6.png" alt="2021-06-25 When to hang up the cards_6.png" width="450" height="17" style="vertical-align:middle">
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/2021-06-03 Riddler Perfect Game_10.png" alt="2021-06-03 Riddler Perfect Game_10.png" width="165" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_7.png" alt="2021-06-25 When to hang up the cards_7.png" width="657" height="39" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ We know this is an optimization function of some kind so we should be able to see some kind of global maximum in our results.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_8.png" alt="2021-06-25 When to hang up the cards_8.png" width="663" height="39" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_9.gif" alt="2021-06-25 When to hang up the cards_9.gif" width="500" height="254" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ And finally, let’s determine which hand is the optimal one to call it quits for which for this game is at 5 hands with an average likely score somewhere around 15.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_10.png" alt="2021-06-25 When to hang up the cards_10.png" width="250" height="17" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_11.png" alt="2021-06-25 When to hang up the cards_11.png" width="116" height="17" style="vertical-align:middle">
 </p>
 
 

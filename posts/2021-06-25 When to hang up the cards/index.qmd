@@ -1,0 +1,11 @@
+---
+title: "When to hang up the cards"
+author: "Andrew Yule"
+date: "2021-06-25"
+categories: [WolframLanguage, Statistics]
+image: "HTMLFiles/2021-06-25 When to hang up the cards_9.gif"
+description: "test"
+format: 
+    html: 
+        include-before-body: "2021-06-25 When to hang up the cards.htm"
+---

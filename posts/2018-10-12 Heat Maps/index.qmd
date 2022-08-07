@@ -1,8 +1,10 @@
 ---
-title: "Utilizing technology to give operators better insights"
+title: "Utilizing Technology To Give Operators Better Insights"
 author: "Andrew Yule"
 date: "2018-10-12"
 categories: [Energy, Python, Visualization]
+image: "Collage.png"
+description: "test"
 ---
 ## How do you visualize complicated pipeline networks?
 
