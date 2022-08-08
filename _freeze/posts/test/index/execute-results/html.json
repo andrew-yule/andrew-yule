@@ -1,0 +1,14 @@
+{
+  "hash": "b03817ed15e8188087b364c248f43124",
+  "result": {
+    "markdown": "---\ntitle: \"When to hang up the cards\"\nauthor: \"Andrew Yule\"\ndate: \"2021-06-25\"\ncategories: [WolframLanguage, Statistics]\ndescription: \"test\"\n---\n\n\n## Here is a 2 header\n\nHere is some text\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(gridExtra)\nlibrary(reshape2)\nlibrary(class)\nlibrary(caret)\nlibrary(e1071)\n\ntheme_set(theme_bw())\n```\n:::\n\n\n```{}\nemployeeData = read_csv(\"https://raw.githubusercontent.com/ayule89/SMU_DDS_CaseStudy2/main/Data/CaseStudy2-data.csv\")\n```\n\nSome `inline` code\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
