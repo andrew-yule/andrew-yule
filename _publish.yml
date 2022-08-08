@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 70e6f10d-d89f-4f07-97c8-b3d7d86538a7
+      url: 'https://illustrious-maamoul-18618e.netlify.app'

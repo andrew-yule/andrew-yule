@@ -1,94 +1,17 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/2021-06-25 When to hang up the cards/index.html",
+    "href": "posts/2021-06-25 When to hang up the cards/index.html",
+    "title": "When to hang up the cards",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This week’s riddler was too interesting to pass up:“Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth its face value in points, while the ace counts for 1 point. To play a game, you shuffle the cards so they are randomly ordered, and then turn them over one by one. You start with 0 points, and as you flip over each card your score increases by that card’s points — as long as the joker hasn’t shown up. The moment the joker appears, the game is over and your score is 0. The key is that you can stop any moment and walk away with a nonzero score.What strategy maximizes your expected number of points?”\n\n\n\n\n\n As always, I like to solve these kinds of problems using simulation because it shows just how powerful computational approaches can be.Let’s start first by creating the deck of cards and then we’ll run a bunch of “simulations” by taking a random order of the cards many times.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n Next, let’s create a helper function to count of score for the given hand assuming we were to stop at anywhere from 1 - 11, noting however, that if we hit a “J” in one of our hands, we will then get a 0 score for that hand and number of cards combination.\n\n\n\n\n\n \n\n\n\n Next, apply our helper function to the simulations and merge the results for the various number of cards dealt taking the average score.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n We know this is an optimization function of some kind so we should be able to see some kind of global maximum in our results.\n\n\n\n\n\n \n\n\n\n \n\n\n\n And finally, let’s determine which hand is the optimal one to call it quits for which for this game is at 5 hands with an average likely score somewhere around 15.\n\n\n\n\n\n \n\n\n\n \n\n\n\n\n\n\n \n  Created with the Wolfram Language"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/2021-06-03 Riddler perfect game/index.html",
+    "href": "posts/2021-06-03 Riddler perfect game/index.html",
+    "title": "On-Base Percentage For a Certain Number of Perfect Games",
     "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Andrew Yule",
-    "section": "",
-    "text": "WolframLanguage\n\n\nStatistics\n\n\n\n\ntest\n\n\n\n\n\n\nJun 25, 2021\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nWolframLanguage\n\n\nStatistics\n\n\nSports\n\n\n\n\ntest\n\n\n\n\n\n\nJun 3, 2021\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nEnergy\n\n\nPython\n\n\nVisualization\n\n\n\n\ntest\n\n\n\n\n\n\nOct 12, 2018\n\n\nAndrew Yule\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "About.html",
-    "href": "About.html",
-    "title": "Andrew Yule",
-    "section": "",
-    "text": "Code\n\nggplot (for Wolfram Language): This is a Wolfram Language implementation of the popular R package called ggplot. It’s one of my favorite side projects, but unfortunately I don’t get as much time to work on it as I would like.\nwl2md: Converts a Mathematica notebook into a Markdown notebook. It’s essentially a re-write of the m2md package (link), as I wanted a little more control over the code base and implementation.\nandrew-yule: Repository for the majority of the content that makes up this website.\n\n\n\nPublications and Presentations\n\nPSIG 2021 Conference, A Novel Approach for Pump Timing Optimization\nEngineering Alex: A Centralized System for Petroleum Production Analytics\nggplot: A Grammar of Graphics for the Wolfram Language\nWolfram Language for Application Development: How to Take Full Advantage of NETLink`\nLessons Learned from Application Development with the Wolfram Language\n\n\n\nLinks\n\nLinkedIn\nTwitter\nGithub"
-  },
-  {
-    "objectID": "Contact.html",
-    "href": "Contact.html",
-    "title": "Andrew Yule",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "posts/test/index.html",
-    "href": "posts/test/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Here is a header\n\n\n\n\n\n Here is another header\n\n\n\n\n\n Here is another header\n\n\n\n\n\n \n\n\n\n \n\n\n\n Here is a link\n\n\n\n\n\n\n\n\n \n  Created with the Wolfram Language"
-  },
-  {
-    "objectID": "posts/2022-07-31 Welcome/index.html",
-    "href": "posts/2022-07-31 Welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/2022-08-01 Post-with-code/index.html",
-    "href": "posts/2022-08-01 Post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "posts/2022-08-04 HTML Test/index.html",
-    "href": "posts/2022-08-04 HTML Test/index.html",
-    "title": "HTML Test",
-    "section": "",
-    "text": "Here is a header\n\n\n\n\n\n Here is another header\n\n\n\n\n\n Here is another header\n\n\n\n\n\n \n\n\n\n \n\n\n\n Here is a link\n\n\n\n\n\n\n\n\n \n  Created with the Wolfram Language"
-  },
-  {
-    "objectID": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html",
-    "href": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html",
-    "title": "Utilizing technology to give operators better insights",
-    "section": "",
-    "text": "The shale revolution in the oil and gas industry has created many unique challenges for operators. The need to optimize production from a company’s assets is larger than ever before and that has spurred significant engineering efforts to create gathering systems capable of delivering that production successfully. Assured Flow Solutions specializes in analyzing these complex networks of pipelines and helps operators to design and operate them as efficiently as possible.\nOne of the challenges we frequently encounter is how to visually see what’s occurring throughout these complicated systems in the best way possible. To address these needs, we have developed a proprietary heat map technology to help visualize field data and simulation results in GIS software such as Google Earth and Global Mapper. The technology allows us to visualize parameters like pressures, temperatures, and flow rates in the field to quickly determine bottlenecks or potential impacts of operational changes."
-  },
-  {
-    "objectID": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html#technology-to-the-rescue",
-    "href": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html#technology-to-the-rescue",
-    "title": "Utilizing technology to give operators better insights",
-    "section": "Technology to the rescue!",
-    "text": "Technology to the rescue!\nWhile these heat maps provide simple and intuitive visualizations of conditions in the field, their creation is actually a very complicated process with several moving pieces. At the highest level, we take raw scalar data, either from the field or else from simulation results, and map it to a geographical coordinate system using latitudes and longitudes. The final result is an actual GIS file that can be loaded and viewed using any traditional GIS software.\nTo accomplish the process successfully, we’ve developed a number of algorithms that leverage several technology stacks. For example, we use the Wolfram Language to create many of the algorithms used for mapping the coordinate system and we use Python to integrate with various simulation software packages allowing the process to be fully automated."
-  },
-  {
-    "objectID": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html#looking-ahead",
-    "href": "posts/2018-10-12 Heat Maps/Utilizing technology to give operators better insights.html#looking-ahead",
-    "title": "Utilizing technology to give operators better insights",
-    "section": "Looking ahead",
-    "text": "Looking ahead\nOur heat map technology has been in development for over a year, but has now reached a very mature state. We’re able to adapt the technology to all kinds of field data and simulation engines, allowing us to leverage it on all of our projects. We believe the resulting simple and intuitive visuals provide huge insights for operators seeking to gain a better understanding of their field or what conditions may look like if changes are made.\nAs we look ahead to the future, we see a great potential to help operators even further by deploying our technology to employees on the ground in real time to help diagnose issues as they occur."
+    "text": "I always enjoy reading the weekly Riddler puzzles from 538 (link). My background is not in statistics, but I enjoy the puzzles because they’re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it’s even better.Here’s the Riddler express from June 3rd 2021 discussing baseball perfect games:\n\n\n\n\n\n “How low would a batter’s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)”\n\n\n\n\n\n My preferred computational tool is the Wolfram Language so I’ll take a stab at solving this Riddler using it. \n\n\n\n\n\n First, let’s define some global constants based on what we are allowed to assume.\n\n\n\n\n\n \n\n\n\n Now, my preferred approach to a lot of these statistically based Riddler’s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. \n\n\n\n\n\n \n\n\n\n Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.\n\n\n\n\n\n \n\n\n\n \n\n\n\n Simulating each season multiple times for various on-base averages let’s us see how the number of predicted perfect games in a season varies.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season\n\n\n\n\n\n \n\n\n\n \n\n\n\n\n\n\n \n  Created with the Wolfram Language"
   },
   {
     "objectID": "posts/2018-10-12 Heat Maps/index.html",
@@ -112,17 +35,17 @@
     "text": "Looking ahead\nOur heat map technology has been in development for over a year, but has now reached a very mature state. We’re able to adapt the technology to all kinds of field data and simulation engines, allowing us to leverage it on all of our projects. We believe the resulting simple and intuitive visuals provide huge insights for operators seeking to gain a better understanding of their field or what conditions may look like if changes are made.\nAs we look ahead to the future, we see a great potential to help operators even further by deploying our technology to employees on the ground in real time to help diagnose issues as they occur."
   },
   {
-    "objectID": "posts/2021-06-03 Riddler perfect game/index.html",
-    "href": "posts/2021-06-03 Riddler perfect game/index.html",
-    "title": "On-Base Percentage For a Certain Number of Perfect Games",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Andrew Yule",
     "section": "",
-    "text": "I always enjoy reading the weekly Riddler puzzles from 538 (link). My background is not in statistics, but I enjoy the puzzles because they’re typically just the right amount of complexity to solve in a reasonable time frame and the topics are interesting and wide-ranging. When there is one involving sports, it’s even better.Here’s the Riddler express from June 3rd 2021 discussing baseball perfect games:\n\n\n\n\n\n “How low would a batter’s chances of reaching base have to be for you to expect one perfect game per season? (You can make the following simplifying assumptions: All batters have the same chances of reaching base; at-bats are independent from each other; there are 30 MLB teams, and each club plays 162 games; and no games go into extra innings.)”\n\n\n\n\n\n My preferred computational tool is the Wolfram Language so I’ll take a stab at solving this Riddler using it. \n\n\n\n\n\n First, let’s define some global constants based on what we are allowed to assume.\n\n\n\n\n\n \n\n\n\n Now, my preferred approach to a lot of these statistically based Riddler’s is to just simulate them. The primary reason is because I have very little actual formal training in statistics, but also because I believe that modern computers today combined with powerful computation languages, give us a very good way of solving these problems that previously had to be solved using pure mathematics.So, we need a way of simulating a baseball season and to start we will need to create a distribution based on the on-base average. In this case, we can use EmpiricalDistribution and assign a weight based on the on-base average. The resulting output will be either a 1 when the batter gets on base, or a 0 when they do not. \n\n\n\n\n\n \n\n\n\n Simulating a full season requires us to randomly sample our on-base distribution for the total number of at bats that we can expect for every game played across each team. Then, to ensure we account for randomness correctly, because this is a simulation, we need to repeat this process a number of times. The more we perform a simulation, averaging the results, the better our prediction will be.RandomVariate lets us sample our distribution a number of times and create nested arrays. In this case we simulate the number of at bats in a game for each team across an entire season 100 times. Then for each simulation we count the number of perfect games we have and take an average across the full number of season simulations.\n\n\n\n\n\n \n\n\n\n \n\n\n\n Simulating each season multiple times for various on-base averages let’s us see how the number of predicted perfect games in a season varies.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n And finally, using the results we can calculate the required on-base average that would lead to one perfect game per season\n\n\n\n\n\n \n\n\n\n \n\n\n\n\n\n\n \n  Created with the Wolfram Language"
+    "text": "WolframLanguage\n\n\nStatistics\n\n\n\n\ntest\n\n\n\n\n\n\nJun 25, 2021\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nWolframLanguage\n\n\nStatistics\n\n\nSports\n\n\n\n\ntest\n\n\n\n\n\n\nJun 3, 2021\n\n\nAndrew Yule\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nEnergy\n\n\nPython\n\n\nVisualization\n\n\n\n\ntest\n\n\n\n\n\n\nOct 12, 2018\n\n\nAndrew Yule\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/2021-06-25 When to hang up the cards/index.html",
-    "href": "posts/2021-06-25 When to hang up the cards/index.html",
-    "title": "When to hang up the cards",
+    "objectID": "About.html",
+    "href": "About.html",
+    "title": "Andrew Yule",
     "section": "",
-    "text": "This week’s riddler was too interesting to pass up:“Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth its face value in points, while the ace counts for 1 point. To play a game, you shuffle the cards so they are randomly ordered, and then turn them over one by one. You start with 0 points, and as you flip over each card your score increases by that card’s points — as long as the joker hasn’t shown up. The moment the joker appears, the game is over and your score is 0. The key is that you can stop any moment and walk away with a nonzero score.What strategy maximizes your expected number of points?”\n\n\n\n\n\n As always, I like to solve these kinds of problems using simulation because it shows just how powerful computational approaches can be.Let’s start first by creating the deck of cards and then we’ll run a bunch of “simulations” by taking a random order of the cards many times.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n Next, let’s create a helper function to count of score for the given hand assuming we were to stop at anywhere from 1 - 11, noting however, that if we hit a “J” in one of our hands, we will then get a 0 score for that hand and number of cards combination.\n\n\n\n\n\n \n\n\n\n Next, apply our helper function to the simulations and merge the results for the various number of cards dealt taking the average score.\n\n\n\n\n\n \n\n\n\n \n\n\n\n \n\n\n\n We know this is an optimization function of some kind so we should be able to see some kind of global maximum in our results.\n\n\n\n\n\n \n\n\n\n \n\n\n\n And finally, let’s determine which hand is the optimal one to call it quits for which for this game is at 5 hands with an average likely score somewhere around 15.\n\n\n\n\n\n \n\n\n\n \n\n\n\n\n\n\n \n  Created with the Wolfram Language"
+    "text": "Code\n\nggplot (for Wolfram Language): This is a Wolfram Language implementation of the popular R package called ggplot. It’s one of my favorite side projects, but unfortunately I don’t get as much time to work on it as I would like.\nwl2md: Converts a Mathematica notebook into a Markdown notebook. It’s essentially a re-write of the m2md package (link), as I wanted a little more control over the code base and implementation.\nandrew-yule: Repository for the majority of the content that makes up this website.\n\n\n\nPublications and Presentations\n\nPSIG 2021 Conference, A Novel Approach for Pump Timing Optimization\nEngineering Alex: A Centralized System for Petroleum Production Analytics\nggplot: A Grammar of Graphics for the Wolfram Language\nWolfram Language for Application Development: How to Take Full Advantage of NETLink`\nLessons Learned from Application Development with the Wolfram Language\n\n\n\nLinks\n\nLinkedIn\nTwitter\nGithub"
   }
 ]
