@@ -1,10 +1,10 @@
 ---
-title: "When to hang up the cards"
+title: "When To Hang Up The Cards"
 author: "Andrew Yule"
 date: "2021-06-25"
-categories: [WolframLanguage, Statistics]
+categories: [Wolfram Language, Statistics]
 image: "HTMLFiles/2021-06-25 When to hang up the cards_9.gif"
-description: "test"
+description: " "
 format: 
     html: 
         include-before-body: "2021-06-25 When to hang up the cards.htm"

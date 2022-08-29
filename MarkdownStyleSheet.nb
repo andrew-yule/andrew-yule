@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[      2728,         72]
-NotebookOptionsPosition[      2386,         64]
-NotebookOutlinePosition[      2798,         80]
-CellTagsIndexPosition[      2755,         77]
+NotebookDataLength[      5119,        146]
+NotebookOptionsPosition[      4410,        135]
+NotebookOutlinePosition[      4822,        151]
+CellTagsIndexPosition[      4779,        148]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,33 +34,104 @@ Notebook[{
 Cell[StyleData[StyleDefinitions -> "Default.nb"],ExpressionUUID->"eceb4868-aadb-43db-8abf-b0c844d0f2bc"],
 
 Cell[StyleData["Title"],
+ CellMargins->{{0, Inherited}, {10, 30}},
+ FontFamily->"Helvetica Neue",
  FontSize->48,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{"FontPostScriptName"->"Automatic"},
  FontColor->GrayLevel[
   0],ExpressionUUID->"c0b4792d-ed48-4b52-bdc9-0997a4087a06"],
 
 Cell[StyleData["Subtitle"],
- FontSize->36,ExpressionUUID->"2553573c-886c-4477-a8cc-1d9d92ec11d7"],
+ CellMargins->{{0, Inherited}, {20, 2}},
+ FontFamily->"Helvetica Neue",
+ FontSize->32,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"2553573c-886c-4477-a8cc-1d9d92ec11d7"],
 
 Cell[StyleData["Chapter"],
- FontSize->36,ExpressionUUID->"0912d394-d9df-4301-88d5-5d2a0140ea45"],
+ CellMargins->{{0, Inherited}, {10, 15}},
+ FontFamily->"Helvetica Neue",
+ FontSize->36,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"0912d394-d9df-4301-88d5-5d2a0140ea45"],
 
 Cell[StyleData["Section"],
+ CellMargins->{{0, Inherited}, {8, 18}},
+ FontFamily->"Helvetica Neue",
  FontSize->36,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{"FontPostScriptName"->"Automatic"},
  FontColor->GrayLevel[
   0],ExpressionUUID->"1f260889-1ba9-44a3-84a0-4ac1e730b882"],
 
 Cell[StyleData["Subsection"],
- FontSize->24,
+ CellMargins->{{0, 3.}, {8., 20.}},
+ FontFamily->"Helvetica Neue",
+ FontSize->28,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{"FontPostScriptName"->"Automatic"},
  FontColor->GrayLevel[
   0],ExpressionUUID->"f76191d6-f8fd-4382-9428-da4c5f489ab4"],
 
 Cell[StyleData["Subsubsection"],
+ CellMargins->{{0, Inherited}, {8, 12}},
+ FontFamily->"Helvetica Neue",
  FontSize->24,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{"FontPostScriptName"->"Automatic"},
  FontColor->GrayLevel[
   0],ExpressionUUID->"b04f02dd-06eb-4e76-8b0e-73b5cf6eb32f"],
 
 Cell[StyleData["Text"],
- FontSize->18,ExpressionUUID->"ad97b0f5-c237-4605-bcdf-21222ec0dbc5"]
+ CellMargins->{{0, 10}, {7, 8}},
+ FontFamily->"Helvetica Neue",
+ FontSize->18,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"ad97b0f5-c237-4605-bcdf-21222ec0dbc5"],
+
+Cell[StyleData["Input"],
+ CellMargins->{{0, 10}, {5, 8}},
+ FontFamily->"Times",
+ FontSize->15,
+ FontWeight->"Bold",
+ FontSlant->"Plain",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"7df73846-b57a-4a0c-9c54-e1646529b12d"],
+
+Cell[StyleData["Output"],
+ CellMargins->{{0, 10}, {12, 5}},
+ FontFamily->"Times",
+ FontSize->15,
+ FontWeight->"Regular",
+ FontSlant->"Plain",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"6db1f70f-2c02-4d49-af32-62203e4b2eae"],
+
+Cell[StyleData["Abstract"],
+ CellMargins->{{0, 120}, {12, 12}},
+ FontFamily->"Helvetica Neue",
+ FontSize->18,
+ FontWeight->"Regular",
+ FontSlant->"Italic",
+ PrivateFontOptions->{
+ "FontPostScriptName"->
+  "Automatic"},ExpressionUUID->"6010fb1d-3d61-45c9-baae-ccafc61ffafd"]
 },
 WindowSize->{808, 731},
 WindowMargins->{{60, Automatic}, {Automatic, 4}},
@@ -80,16 +151,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[1464, 33, 104, 0, 31, 49, 0, "StyleData", "StyleDefinitions", "",ExpressionUUID->"eceb4868-aadb-43db-8abf-b0c844d0f2bc"],
-Cell[1571, 35, 123, 3, 117, 24, 0, "StyleData", "Title", "All",ExpressionUUID->"c0b4792d-ed48-4b52-bdc9-0997a4087a06"],
-Cell[1697, 40, 97, 1, 84, 27, 0, "StyleData", "Subtitle", "All",ExpressionUUID->"2553573c-886c-4477-a8cc-1d9d92ec11d7"],
-Cell[1797, 43, 96, 1, 87, 26, 0, "StyleData", "Chapter", "All",ExpressionUUID->"0912d394-d9df-4301-88d5-5d2a0140ea45"],
-Cell[1896, 46, 125, 3, 79, 26, 0, "StyleData", "Section", "All",ExpressionUUID->"1f260889-1ba9-44a3-84a0-4ac1e730b882"],
-Cell[2024, 51, 128, 3, 58, 29, 0, "StyleData", "Subsection", "All",ExpressionUUID->"f76191d6-f8fd-4382-9428-da4c5f489ab4"],
-Cell[2155, 56, 131, 3, 58, 32, 0, "StyleData", "Subsubsection", "All",ExpressionUUID->"b04f02dd-06eb-4e76-8b0e-73b5cf6eb32f"],
-Cell[2289, 61, 93, 1, 50, 23, 0, "StyleData", "Text", "All",ExpressionUUID->"ad97b0f5-c237-4605-bcdf-21222ec0dbc5"]
+Cell[1571, 35, 299, 8, 112, 24, 0, "StyleData", "Title", "All",ExpressionUUID->"c0b4792d-ed48-4b52-bdc9-0997a4087a06"],
+Cell[1873, 45, 277, 8, 76, 27, 0, "StyleData", "Subtitle", "All",ExpressionUUID->"2553573c-886c-4477-a8cc-1d9d92ec11d7"],
+Cell[2153, 55, 277, 8, 83, 26, 0, "StyleData", "Chapter", "All",ExpressionUUID->"0912d394-d9df-4301-88d5-5d2a0140ea45"],
+Cell[2433, 65, 300, 8, 75, 26, 0, "StyleData", "Section", "All",ExpressionUUID->"1f260889-1ba9-44a3-84a0-4ac1e730b882"],
+Cell[2736, 75, 298, 8, 61, 29, 0, "StyleData", "Subsection", "All",ExpressionUUID->"f76191d6-f8fd-4382-9428-da4c5f489ab4"],
+Cell[3037, 85, 306, 8, 56, 32, 0, "StyleData", "Subsubsection", "All",ExpressionUUID->"b04f02dd-06eb-4e76-8b0e-73b5cf6eb32f"],
+Cell[3346, 95, 265, 8, 48, 23, 0, "StyleData", "Text", "All",ExpressionUUID->"ad97b0f5-c237-4605-bcdf-21222ec0dbc5"],
+Cell[3614, 105, 254, 8, 44, 24, 0, "StyleData", "Input", "All",ExpressionUUID->"7df73846-b57a-4a0c-9c54-e1646529b12d"],
+Cell[3871, 115, 259, 8, 48, 25, 0, "StyleData", "Output", "All",ExpressionUUID->"6db1f70f-2c02-4d49-af32-62203e4b2eae"],
+Cell[4133, 125, 273, 8, 79, 27, 0, "StyleData", "Abstract", "All",ExpressionUUID->"6010fb1d-3d61-45c9-baae-ccafc61ffafd"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

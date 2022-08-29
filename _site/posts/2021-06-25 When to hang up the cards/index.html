@@ -2,22 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.1.163">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andrew Yule">
 <meta name="dcterms.date" content="2021-06-25">
-<meta name="description" content="test">
 
-<title>Andrew Yule - When to hang up the cards</title>
+<title>Andrew Yule - When To Hang Up The Cards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -67,9 +71,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Andrew Yule</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -111,14 +117,9 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">When to hang up the cards</h1>
-                  <div>
-        <div class="description">
-          test
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">WolframLanguage</div>
+      <h1 class="title">When To Hang Up The Cards</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Wolfram Language</div>
                 <div class="quarto-category">Statistics</div>
               </div>
                   </div>
@@ -166,7 +167,13 @@ ul.task-list{list-style: none;}
 
 
 <p class="Text">
- This week’s riddler was too interesting to pass up:<br><br>“Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth its face value in points, while the ace counts for 1 point. To play a game, you shuffle the cards so they are randomly ordered, and then turn them over one by one. You start with 0 points, and as you flip over each card your score increases by that card’s points — as long as the joker hasn’t shown up. The moment the joker appears, the game is over and your score is 0. The key is that you can stop any moment and walk away with a nonzero score.<br><br>What strategy maximizes your expected number of points?”
+ This week’s riddler was too interesting to pass up:
+</p>
+
+
+
+<p class="Abstract">
+ “Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth its face value in points, while the ace counts for 1 point. To play a game, you shuffle the cards so they are randomly ordered, and then turn them over one by one. You start with 0 points, and as you flip over each card your score increases by that card’s points — as long as the joker hasn’t shown up. The moment the joker appears, the game is over and your score is 0. The key is that you can stop any moment and walk away with a nonzero score.<br><br>What strategy maximizes your expected number of points?”
 </p>
 
 
@@ -178,15 +185,15 @@ ul.task-list{list-style: none;}
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_1.png" alt="2021-06-25 When to hang up the cards_1.png" width="254" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_1.png" alt="2021-06-25 When to hang up the cards_1.png" width="289" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_2.png" alt="2021-06-25 When to hang up the cards_2.png" width="242" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_2.png" alt="2021-06-25 When to hang up the cards_2.png" width="266" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_3.png" alt="2021-06-25 When to hang up the cards_3.png" width="384" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_3.png" alt="2021-06-25 When to hang up the cards_3.png" width="441" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Text">
@@ -196,7 +203,7 @@ ul.task-list{list-style: none;}
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_4.png" alt="2021-06-25 When to hang up the cards_4.png" width="596" height="60" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_4.png" alt="2021-06-25 When to hang up the cards_4.png" width="682" height="77" style="vertical-align:middle">
 </p>
 
 <p class="Text">
@@ -206,15 +213,15 @@ ul.task-list{list-style: none;}
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_5.png" alt="2021-06-25 When to hang up the cards_5.png" width="273" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_5.png" alt="2021-06-25 When to hang up the cards_5.png" width="315" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_6.png" alt="2021-06-25 When to hang up the cards_6.png" width="450" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_6.png" alt="2021-06-25 When to hang up the cards_6.png" width="516" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_7.png" alt="2021-06-25 When to hang up the cards_7.png" width="657" height="39" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_7.png" alt="2021-06-25 When to hang up the cards_7.png" width="740" height="44" style="vertical-align:middle">
 </p>
 
 <p class="Text">
@@ -224,7 +231,7 @@ ul.task-list{list-style: none;}
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_8.png" alt="2021-06-25 When to hang up the cards_8.png" width="663" height="39" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_8.png" alt="2021-06-25 When to hang up the cards_8.png" width="760" height="50" style="vertical-align:middle">
 </p>
 
 <p class="Output">
@@ -238,21 +245,16 @@ ul.task-list{list-style: none;}
 
 
 <p class="Input">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_10.png" alt="2021-06-25 When to hang up the cards_10.png" width="250" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_10.png" alt="2021-06-25 When to hang up the cards_10.png" width="289" height="19" style="vertical-align:middle">
 </p>
 
 <p class="Output">
- <img src="HTMLFiles/2021-06-25 When to hang up the cards_11.png" alt="2021-06-25 When to hang up the cards_11.png" width="116" height="17" style="vertical-align:middle">
+ <img src="HTMLFiles/2021-06-25 When to hang up the cards_11.png" alt="2021-06-25 When to hang up the cards_11.png" width="131" height="19" style="vertical-align:middle">
 </p>
 
 
 
 
-<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
- <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
-  <span style="color:#555555">Created with the Wolfram Language</span> 
- </a>
-</div>
 
 
 
@@ -333,7 +335,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
