@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[      5119,        146]
-NotebookOptionsPosition[      4410,        135]
-NotebookOutlinePosition[      4822,        151]
-CellTagsIndexPosition[      4779,        148]
+NotebookDataLength[      4943,        139]
+NotebookOptionsPosition[      4234,        128]
+NotebookOutlinePosition[      4647,        144]
+CellTagsIndexPosition[      4604,        141]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -124,16 +124,9 @@ Cell[StyleData["Output"],
   "Automatic"},ExpressionUUID->"6db1f70f-2c02-4d49-af32-62203e4b2eae"],
 
 Cell[StyleData["Abstract"],
- CellMargins->{{0, 120}, {12, 12}},
- FontFamily->"Helvetica Neue",
- FontSize->18,
- FontWeight->"Regular",
- FontSlant->"Italic",
- PrivateFontOptions->{
- "FontPostScriptName"->
-  "Automatic"},ExpressionUUID->"6010fb1d-3d61-45c9-baae-ccafc61ffafd"]
+ FontSize->18,ExpressionUUID->"5d8ebfef-3bda-4563-8a8d-c755f48c8492"]
 },
-WindowSize->{808, 731},
+WindowSize->{1022, 731},
 WindowMargins->{{60, Automatic}, {Automatic, 4}},
 FrontEndVersion->"13.1 for Mac OS X ARM (64-bit) (June 16, 2022)",
 StyleDefinitions->"PrivateStylesheetFormatting.nb",
@@ -160,7 +153,7 @@ Cell[3037, 85, 306, 8, 56, 32, 0, "StyleData", "Subsubsection", "All",Expression
 Cell[3346, 95, 265, 8, 48, 23, 0, "StyleData", "Text", "All",ExpressionUUID->"ad97b0f5-c237-4605-bcdf-21222ec0dbc5"],
 Cell[3614, 105, 254, 8, 44, 24, 0, "StyleData", "Input", "All",ExpressionUUID->"7df73846-b57a-4a0c-9c54-e1646529b12d"],
 Cell[3871, 115, 259, 8, 48, 25, 0, "StyleData", "Output", "All",ExpressionUUID->"6db1f70f-2c02-4d49-af32-62203e4b2eae"],
-Cell[4133, 125, 273, 8, 79, 27, 0, "StyleData", "Abstract", "All",ExpressionUUID->"6010fb1d-3d61-45c9-baae-ccafc61ffafd"]
+Cell[4133, 125, 97, 1, 81, 27, 0, "StyleData", "Abstract", "All",ExpressionUUID->"5d8ebfef-3bda-4563-8a8d-c755f48c8492"]
 }
 ]
 *)
