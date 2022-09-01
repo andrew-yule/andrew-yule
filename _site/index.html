@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -159,21 +159,24 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Wolfram Language,Statistics" data-listing-date-sort="1624597200000" data-listing-file-modified-sort="1661808130231" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<p><a href="./posts/2021-06-25 When to hang up the cards/index.html"> <img src="./posts/2021-06-25 When to hang up the cards/HTMLFiles/2021-06-25 When to hang up the cards_9.gif" class="thumnail-image"> </a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<a href="./posts/2021-06-25 When to hang up the cards/index.html">
-<h3 class="no-anchor listing-title">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Wolfram Language,Statistics" data-listing-date-sort="1624597200000" data-listing-file-modified-sort="1662056739670" data-listing-reading-time-sort="0.005">
+<a href="./posts/2021-06-25 When to hang up the cards/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/2021-06-25 When to hang up the cards/HTMLFiles/2021-06-25 When to hang up the cards_9.gif" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 When To Hang Up The Cards
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Wolfram Language'); return false;">
 Wolfram Language
@@ -182,36 +185,31 @@ Wolfram Language
 Statistics
 </div>
 </div>
-<a href="./posts/2021-06-25 When to hang up the cards/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2021-06-25 When to hang up the cards/index.html">
-<div class="listing-date">
-Jun 25, 2021
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Andrew Yule
 </div>
+<div class="listing-date">
+Jun 25, 2021
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Wolfram Language,Statistics,Sports" data-listing-date-sort="1622696400000" data-listing-file-modified-sort="1661808130231" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<p><a href="./posts/2021-06-03 Riddler perfect game/index.html"> <img src="./posts/2021-06-03 Riddler perfect game/HTMLFiles/2021-06-03 Riddler Perfect Game_8.gif" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2021-06-03 Riddler perfect game/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-categories="Wolfram Language,Statistics,Sports" data-listing-date-sort="1622696400000" data-listing-file-modified-sort="1661808130231" data-listing-reading-time-sort="0.005">
+<a href="./posts/2021-06-03 Riddler perfect game/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/2021-06-03 Riddler perfect game/HTMLFiles/2021-06-03 Riddler Perfect Game_8.gif" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 On-Base Percentage For a Certain Number of Perfect Games
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Wolfram Language'); return false;">
 Wolfram Language
@@ -223,36 +221,31 @@ Statistics
 Sports
 </div>
 </div>
-<a href="./posts/2021-06-03 Riddler perfect game/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2021-06-03 Riddler perfect game/index.html">
-<div class="listing-date">
-Jun 3, 2021
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Andrew Yule
 </div>
+<div class="listing-date">
+Jun 3, 2021
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Energy,Visualization,Wolfram Language,Python" data-listing-date-sort="1539320400000" data-listing-file-modified-sort="1661808130231" data-listing-reading-time-sort="1.955">
-<div class="thumbnail">
-<p><a href="./posts/2018-10-12 Heat Maps/index.html"> <img src="./posts/2018-10-12 Heat Maps/Collage.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2018-10-12 Heat Maps/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-categories="Energy,Visualization,Wolfram Language,Python" data-listing-date-sort="1539320400000" data-listing-file-modified-sort="1661808130231" data-listing-reading-time-sort="1.955">
+<a href="./posts/2018-10-12 Heat Maps/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/2018-10-12 Heat Maps/Collage.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Utilizing Technology To Give Operators Better Insights
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Energy'); return false;">
 Energy
@@ -267,22 +260,20 @@ Wolfram Language
 Python
 </div>
 </div>
-<a href="./posts/2018-10-12 Heat Maps/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2018-10-12 Heat Maps/index.html">
-<div class="listing-date">
-Oct 12, 2018
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Andrew Yule
 </div>
-</a>
+<div class="listing-date">
+Oct 12, 2018
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
