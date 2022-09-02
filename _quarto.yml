@@ -25,3 +25,5 @@ format:
   html:
     theme: litera
     css: styles.css
+    mainfont: "Source Sans Pro"
+    

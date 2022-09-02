@@ -1,1 +1,84 @@
 /* css styles */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+font-family: 'Source Sans Pro', sans-serif;
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h1.title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 34px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+  
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
