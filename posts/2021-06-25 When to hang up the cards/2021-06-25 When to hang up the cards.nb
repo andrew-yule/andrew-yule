@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12953,        334]
-NotebookOptionsPosition[     10886,        295]
-NotebookOutlinePosition[     11279,        311]
-CellTagsIndexPosition[     11236,        308]
+NotebookDataLength[     12951,        333]
+NotebookOptionsPosition[     10884,        294]
+NotebookOutlinePosition[     11277,        310]
+CellTagsIndexPosition[     11234,        307]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,22 +25,21 @@ Cell["This week\[CloseCurlyQuote]s riddler was too interesting to pass up:", \
 0df78df11682"],
 
 Cell["\<\
-\[OpenCurlyDoubleQuote]Riddler solitaire is played with 11 cards: an ace, a \
-two, a three, a four, a five, a six, a seven, an eight, a nine, a 10 and a \
-joker. Each card is worth its face value in points, while the ace counts for \
-1 point. To play a game, you shuffle the cards so they are randomly ordered, \
-and then turn them over one by one. You start with 0 points, and as you flip \
-over each card your score increases by that card\[CloseCurlyQuote]s points \
-\[LongDash] as long as the joker hasn\[CloseCurlyQuote]t shown up. The moment \
-the joker appears, the game is over and your score is 0. The key is that you \
-can stop any moment and walk away with a nonzero score.
+Riddler solitaire is played with 11 cards: an ace, a two, a three, a four, a \
+five, a six, a seven, an eight, a nine, a 10 and a joker. Each card is worth \
+its face value in points, while the ace counts for 1 point. To play a game, \
+you shuffle the cards so they are randomly ordered, and then turn them over \
+one by one. You start with 0 points, and as you flip over each card your \
+score increases by that card\[CloseCurlyQuote]s points \[LongDash] as long as \
+the joker hasn\[CloseCurlyQuote]t shown up. The moment the joker appears, the \
+game is over and your score is 0. The key is that you can stop any moment and \
+walk away with a nonzero score.
 
 What strategy maximizes your expected number of points?\
-\[CloseCurlyDoubleQuote]\
 \>", "Abstract",
  CellChangeTimes->{{3.833630340279896*^9, 3.833630371362576*^9}, {
-  3.870797539824749*^9, 
-  3.870797545897352*^9}},ExpressionUUID->"dc721957-b04f-43e1-8a79-\
+  3.870797539824749*^9, 3.870797545897352*^9}, {3.87111902145774*^9, 
+  3.8711190234353027`*^9}},ExpressionUUID->"dc721957-b04f-43e1-8a79-\
 bcbe61057085"],
 
 Cell["\<\
@@ -311,30 +310,30 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 190, 4, 35, "Text",ExpressionUUID->"efd354de-fb2a-4bd0-9457-0df78df11682"],
-Cell[751, 26, 969, 17, 246, "Abstract",ExpressionUUID->"dc721957-b04f-43e1-8a79-bcbe61057085"],
-Cell[1723, 45, 564, 11, 127, "Text",ExpressionUUID->"aa917de3-9304-4444-94d5-b3a49f9568c0"],
+Cell[751, 26, 967, 16, 246, "Abstract",ExpressionUUID->"dc721957-b04f-43e1-8a79-bcbe61057085"],
+Cell[1721, 44, 564, 11, 127, "Text",ExpressionUUID->"aa917de3-9304-4444-94d5-b3a49f9568c0"],
 Cell[CellGroupData[{
-Cell[2312, 60, 375, 10, 30, "Input",ExpressionUUID->"9a25a314-6b62-4f06-ad91-2c74fd9f6d84"],
-Cell[2690, 72, 302, 6, 34, "Output",ExpressionUUID->"f944d65c-87a9-4e38-8f51-b31ec081b16b"]
+Cell[2310, 59, 375, 10, 30, "Input",ExpressionUUID->"9a25a314-6b62-4f06-ad91-2c74fd9f6d84"],
+Cell[2688, 71, 302, 6, 34, "Output",ExpressionUUID->"f944d65c-87a9-4e38-8f51-b31ec081b16b"]
 }, Open  ]],
-Cell[3007, 81, 575, 11, 30, "Input",ExpressionUUID->"c77c964b-7d19-416a-ac14-d6c7d5f48528"],
-Cell[3585, 94, 477, 9, 81, "Text",ExpressionUUID->"20f1e439-db2e-44a6-96c5-0c9d3c194526"],
-Cell[4065, 105, 889, 23, 73, "Input",ExpressionUUID->"5b97bf16-c523-4bb4-8479-3f4e9b5335e8"],
-Cell[4957, 130, 337, 7, 58, "Text",ExpressionUUID->"d9714418-131b-4a36-8c46-d755ec33a1b6"],
-Cell[5297, 139, 320, 7, 30, "Input",ExpressionUUID->"1e691fa6-dc7e-4bc9-8a72-87e6f97f3bb3"],
+Cell[3005, 80, 575, 11, 30, "Input",ExpressionUUID->"c77c964b-7d19-416a-ac14-d6c7d5f48528"],
+Cell[3583, 93, 477, 9, 81, "Text",ExpressionUUID->"20f1e439-db2e-44a6-96c5-0c9d3c194526"],
+Cell[4063, 104, 889, 23, 73, "Input",ExpressionUUID->"5b97bf16-c523-4bb4-8479-3f4e9b5335e8"],
+Cell[4955, 129, 337, 7, 58, "Text",ExpressionUUID->"d9714418-131b-4a36-8c46-d755ec33a1b6"],
+Cell[5295, 138, 320, 7, 30, "Input",ExpressionUUID->"1e691fa6-dc7e-4bc9-8a72-87e6f97f3bb3"],
 Cell[CellGroupData[{
-Cell[5642, 150, 539, 13, 30, "Input",ExpressionUUID->"3199ef33-760c-4c00-8d16-e6b288ad8f42"],
-Cell[6184, 165, 1054, 29, 56, "Output",ExpressionUUID->"df53b1dd-823d-4252-8cd2-7fb0269c112e"]
+Cell[5640, 149, 539, 13, 30, "Input",ExpressionUUID->"3199ef33-760c-4c00-8d16-e6b288ad8f42"],
+Cell[6182, 164, 1054, 29, 56, "Output",ExpressionUUID->"df53b1dd-823d-4252-8cd2-7fb0269c112e"]
 }, Open  ]],
-Cell[7253, 197, 277, 6, 58, "Text",ExpressionUUID->"c3292afa-ed02-4352-979a-3a214b208d7d"],
+Cell[7251, 196, 277, 6, 58, "Text",ExpressionUUID->"c3292afa-ed02-4352-979a-3a214b208d7d"],
 Cell[CellGroupData[{
-Cell[7555, 207, 553, 12, 52, "Input",ExpressionUUID->"a4a18c18-f7c1-4692-baf0-fe871d4549c3"],
-Cell[8111, 221, 1886, 46, 271, "Output",ExpressionUUID->"64226d5e-4327-42d0-b21e-368b33748f55"]
+Cell[7553, 206, 553, 12, 52, "Input",ExpressionUUID->"a4a18c18-f7c1-4692-baf0-fe871d4549c3"],
+Cell[8109, 220, 1886, 46, 271, "Output",ExpressionUUID->"64226d5e-4327-42d0-b21e-368b33748f55"]
 }, Open  ]],
-Cell[10012, 270, 333, 7, 58, "Text",ExpressionUUID->"c693e043-546f-4b9f-8bce-b87ed8d0eaa6"],
+Cell[10010, 269, 333, 7, 58, "Text",ExpressionUUID->"c693e043-546f-4b9f-8bce-b87ed8d0eaa6"],
 Cell[CellGroupData[{
-Cell[10370, 281, 247, 4, 30, "Input",ExpressionUUID->"cff6783a-0808-4366-acad-e69a9554c52b"],
-Cell[10620, 287, 250, 5, 34, "Output",ExpressionUUID->"8d80e4c4-ad98-4fb0-bbae-d73185870a52"]
+Cell[10368, 280, 247, 4, 30, "Input",ExpressionUUID->"cff6783a-0808-4366-acad-e69a9554c52b"],
+Cell[10618, 286, 250, 5, 34, "Output",ExpressionUUID->"8d80e4c4-ad98-4fb0-bbae-d73185870a52"]
 }, Open  ]]
 }
 ]
