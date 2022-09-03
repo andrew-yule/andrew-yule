@@ -3,7 +3,7 @@
   font-size: 45px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   line-height: 1.08889;
   margin-left: 0px;
@@ -16,7 +16,7 @@
   font-size: 45px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   line-height: 1.08889;
   margin-left: 0px;
@@ -27,12 +27,12 @@
 }
 /* Chapter:*/
 .Chapter {
-  font-size: 38px;
+  font-size: 34px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
-  line-height: 1.10526;
+  line-height: 1.11765;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 15px;
@@ -40,12 +40,12 @@
   padding: 8px;
 }
 .ChapterInline {
-  font-size: 38px;
+  font-size: 34px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
-  line-height: 1.10526;
+  line-height: 1.11765;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 15px;
@@ -54,12 +54,12 @@
 }
 /* Section:*/
 .Section {
-  font-size: 34px;
+  font-size: 30px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
-  line-height: 1.05882;
+  line-height: 1.06667;
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
@@ -73,12 +73,12 @@
   padding: 4px;
 }
 .SectionInline {
-  font-size: 34px;
+  font-size: 30px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
-  line-height: 1.05882;
+  line-height: 1.06667;
   border-left: 0px;
   border-right: 0px;
   border-top: 0px;
@@ -93,10 +93,10 @@
 }
 /* Subsection:*/
 .Subsection {
-  font-size: 28px;
+  font-size: 24px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   margin-left: 0px;
   margin-right: 0px;
@@ -105,10 +105,10 @@
   padding: 8px;
 }
 .SubsectionInline {
-  font-size: 28px;
+  font-size: 24px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   margin-left: 0px;
   margin-right: 0px;
@@ -118,10 +118,10 @@
 }
 /* Subsubsection:*/
 .Subsubsection {
-  font-size: 24px;
+  font-size: 22px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   margin-left: 0px;
   margin-right: 0px;
@@ -130,10 +130,10 @@
   padding: 8px;
 }
 .SubsubsectionInline {
-  font-size: 24px;
+  font-size: 22px;
   font-family: Source Sans Pro;
   font-style: normal;
-  font-weight: Regular;
+  font-weight: bold;
   color: #000000;
   margin-left: 0px;
   margin-right: 0px;
@@ -215,7 +215,7 @@
 /* Abstract:*/
 .Abstract {
   font-size: 20px;
-  font-family: Automatic;
+  font-family: Source Sans Pro;
   font-style: italic;
   font-weight: Regular;
   line-height: 1.15;
@@ -233,7 +233,7 @@
 }
 .AbstractInline {
   font-size: 20px;
-  font-family: Automatic;
+  font-family: Source Sans Pro;
   font-style: italic;
   font-weight: Regular;
   line-height: 1.15;
@@ -2784,7 +2784,7 @@ Floor[100 Dynamic[0.75 ----------------------------------------------]]
   color: #808080;
   text-align: left;
   line-height:                1
-If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273367]
+If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$314926]
         -2. + Inherited;
   padding: 8px;
 }
@@ -2796,7 +2796,7 @@ If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273367]
   color: #808080;
   text-align: left;
   line-height:                1
-If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273383]
+If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$314942]
         -2. + Inherited;
   padding: 8px;
 }
@@ -2809,7 +2809,7 @@ If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273383]
   color: #808080;
   text-align: left;
   line-height:                1
-If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273399]
+If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$314958]
         -1. + Inherited;
   padding: 8px;
 }
@@ -2821,7 +2821,7 @@ If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273399]
   color: #808080;
   text-align: left;
   line-height:                1
-If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$273415]
+If[1. + --------------- < 0, 0, System`Convert`CSSDump`c$314974]
         -1. + Inherited;
   padding: 8px;
 }

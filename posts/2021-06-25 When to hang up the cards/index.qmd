@@ -1,6 +1,6 @@
 ---
 title: "When To Hang Up The Cards"
-description: "XX"
+description: "FiveThirtyEight's Riddler solution from 06/25/2021"
 author: "Andrew Yule"
 date: "2021-06-25"
 categories: [Wolfram Language, Statistics]

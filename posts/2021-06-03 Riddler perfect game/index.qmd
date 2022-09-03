@@ -1,6 +1,6 @@
 ---
 title: "On-Base Percentage For a Certain Number of Perfect Games"
-description: "XX"
+description: "FiveThirtyEight's Riddler solution from 06/03/2021"
 author: "Andrew Yule"
 date: "2021-06-03"
 categories: [Wolfram Language, Statistics, Sports]
