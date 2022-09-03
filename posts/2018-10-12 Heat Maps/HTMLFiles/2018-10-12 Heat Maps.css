@@ -1,7 +1,7 @@
 /* Title:*/
 .Title {
   font-size: 45px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -14,7 +14,7 @@
 }
 .TitleInline {
   font-size: 45px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -28,7 +28,7 @@
 /* Chapter:*/
 .Chapter {
   font-size: 34px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -41,7 +41,7 @@
 }
 .ChapterInline {
   font-size: 34px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -55,7 +55,7 @@
 /* Section:*/
 .Section {
   font-size: 30px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -74,7 +74,7 @@
 }
 .SectionInline {
   font-size: 30px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -94,7 +94,7 @@
 /* Subsection:*/
 .Subsection {
   font-size: 24px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -106,7 +106,7 @@
 }
 .SubsectionInline {
   font-size: 24px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -119,7 +119,7 @@
 /* Subsubsection:*/
 .Subsubsection {
   font-size: 22px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -131,7 +131,7 @@
 }
 .SubsubsectionInline {
   font-size: 22px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   color: #000000;
@@ -144,7 +144,7 @@
 /* Text:*/
 .Text {
   font-size: 20px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: Regular;
   line-height: 1.15;
@@ -156,7 +156,7 @@
 }
 .TextInline {
   font-size: 20px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: Regular;
   line-height: 1.15;
@@ -215,7 +215,7 @@
 /* Abstract:*/
 .Abstract {
   font-size: 20px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: italic;
   font-weight: Regular;
   line-height: 1.15;
@@ -233,7 +233,7 @@
 }
 .AbstractInline {
   font-size: 20px;
-  font-family: Source Serif Pro;
+  font-family: Source Sans Pro;
   font-style: italic;
   font-weight: Regular;
   line-height: 1.15;
