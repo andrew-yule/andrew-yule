@@ -2,26 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.163">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andrew Yule">
 <meta name="dcterms.date" content="2018-10-12">
+<meta name="description" content="How to improve insights into complicated onshore pipeline networks">
 
-<title>Andrew Yule - Utilizing Technology To Give Operators Better Insights</title>
+<title>Andrew Yule - Improving Operations Through Visualization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 </style>
 
 
@@ -71,11 +67,9 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+      <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Andrew Yule</span>
-    </a>
-  </div>
+  </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -114,68 +108,129 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Utilizing Technology To Give Operators Better Insights</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Energy</div>
-                <div class="quarto-category">Visualization</div>
-                <div class="quarto-category">Wolfram Language</div>
-                <div class="quarto-category">Python</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Andrew Yule </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">October 12, 2018</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+<!--?xml version="1.0" encoding="UTF-8"?-->
+
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+
+
+ <title>
+  2018-10-12 Heat Maps
+ </title>
+ <link href="HTMLFiles/2018-10-12 Heat Maps.css" rel="stylesheet" type="text/css">
 
 
 
 
-<section id="how-do-you-visualize-complicated-pipeline-networks" class="level2">
-<h2 class="anchored" data-anchor-id="how-do-you-visualize-complicated-pipeline-networks">How do you visualize complicated pipeline networks?</h2>
-<p>The shale revolution in the oil and gas industry has created many unique challenges for operators. The need to optimize production from a company’s assets is larger than ever before and that has spurred significant engineering efforts to create gathering systems capable of delivering that production successfully. Assured Flow Solutions specializes in analyzing these complex networks of pipelines and helps operators to design and operate them as efficiently as possible.</p>
-<p>One of the challenges we frequently encounter is how to visually see what’s occurring throughout these complicated systems in the best way possible. To address these needs, we have developed a proprietary heat map technology to help visualize field data and simulation results in GIS software such as Google Earth and Global Mapper. The technology allows us to visualize parameters like pressures, temperatures, and flow rates in the field to quickly determine bottlenecks or potential impacts of operational changes.</p>
-<p><img src="Collage.png" class="img-fluid"></p>
-</section>
-<section id="technology-to-the-rescue" class="level2">
-<h2 class="anchored" data-anchor-id="technology-to-the-rescue">Technology to the rescue!</h2>
-<p>While these heat maps provide simple and intuitive visualizations of conditions in the field, their creation is actually a very complicated process with several moving pieces. At the highest level, we take raw scalar data, either from the field or else from simulation results, and map it to a geographical coordinate system using latitudes and longitudes. The final result is an actual GIS file that can be loaded and viewed using any traditional GIS software.</p>
-<p>To accomplish the process successfully, we’ve developed a number of algorithms that leverage several technology stacks. For example, we use the Wolfram Language to create many of the algorithms used for mapping the coordinate system and we use Python to integrate with various simulation software packages allowing the process to be fully automated.</p>
-<p><img src="Collage2.png" class="img-fluid"></p>
-</section>
-<section id="looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead">Looking ahead</h2>
-<p>Our heat map technology has been in development for over a year, but has now reached a very mature state. We’re able to adapt the technology to all kinds of field data and simulation engines, allowing us to leverage it on all of our projects. We believe the resulting simple and intuitive visuals provide huge insights for operators seeking to gain a better understanding of their field or what conditions may look like if changes are made.</p>
-<p>As we look ahead to the future, we see a great potential to help operators even further by deploying our technology to employees on the ground in real time to help diagnose issues as they occur.</p>
+<p class="Title">
+ Improving Operations Through Visualization
+</p>
 
 
-</section>
+
+<p class="Subsection">
+ How do you understand thermal-hydraulic behavior in large pipeline networks?
+</p>
+
+
+
+<p class="Text">
+ This was the exact question I asked myself during some of the recent work we kicked off to look at a an onshore midstream hydrocarbon distribution network.<br><br>Spending the majority of my time working on offshore fields, the technical challenges are obviously there, but the infrastructures you work with are generally pretty simple. A few wells tying into a manifold, followed by a single subsea tieback to a host facility is a typical scenario. Under those conditions, things like temperature and pressure can easily be visualized through profile plots of a particular pipeline like the one below.<br><br><span class="InputInline"><span><img src="HTMLFiles/2018-10-12 Heat Maps_1.gif" alt="2018-10-12 Heat Maps_1.gif" width="605" height="204" style="vertical-align:middle"></span></span><br><br>Compare that to onshore networks, and in particular, midstream companies operating networks, where you can end up with 100’s of pipelines with numerous “sources” or feeds joining the system, and “sinks” or feeds leaving the system. Answering very specific questions about that network can be done, but getting an understanding of the entire system under certain scenarios is difficult.
+</p>
+
+
+
+<p class="Subsection">
+ Visualization to the rescue!
+</p>
+
+
+
+<p class="Text">
+ One of the best ways to understand data is to be able to visualize it. When that data is in the context of a geographical layout, then what I have come to realize is that the best approach to visualization should be something that embraces that geographical dependency. Enter heat maps.<br><br><span class="InputInline"><span><img src="HTMLFiles/2018-10-12 Heat Maps_2.gif" alt="2018-10-12 Heat Maps_2.gif" width="746" height="347" style="vertical-align:middle"></span></span><br><br>In the above examples, you can see a few of the visualizations created for some onshore pipeline networks looking at things like temperatures and pressures through a field. In most cases, the coloring of the lines allows for very clear picture of where in the system higher values are located. This helps to understand e.g. where bottlenecks might be which could be caused by insufficiently size pipes or excess flow that needs to be diverted.
+</p>
+
+
+
+<p class="Subsection">
+ General workflow
+</p>
+
+
+
+<p class="Text">
+ So what’s required to make one of these? Well the fundamental process is actually fairly easy to understand, but like anything, the devil is in the details.<br><br>First, we need a starting GIS file of some kind, which defines our coordinates (lat/longs) of the various pipelines. Next, we need a source of data describing the values we’re interested in displaying for each of the pipelines. Finally, we need to take that data we’re interested in viewing, create an overall scale for it (low to high), and then essentially transpose it with our GIS data.<br><br>In terms of specifics, the diagram below shows the high-level technology stacks that make this possible. First, a GIS file is used to build a simulation. In my case this is typically PIPESIM, which has the benefits of a.) having built-in GIS support and b.) having a python API. The python API allows for information on the distances of each pipeline along with their coordinates to be extracted automatically. Next, I use the Wolfram Language’s geo-related functions to scale my simulation data along the actual GIS coordinates of a particular pipeline. Finally, the generated data is written into a kml file as plain text where it may be viewed by 3rd party software or loaded back in to the Wolfram Language.<br><span><span><img src="HTMLFiles/2018-10-12 Heat Maps_3.gif" alt="2018-10-12 Heat Maps_3.gif" width="591" height="502" style="vertical-align:middle"></span></span>
+</p>
+
+
+
+<p class="Subsection">
+ Looking ahead
+</p>
+
+
+
+<p class="Text">
+ Numerous software (PIPESIM included) now have the ability to generate heat maps natively within their user interfaces. What’s unique about this technology is that the end result is a kml file. This allows the heat map to be opened by numerous 3rd party pieces of software such as Google Earth and Global Mapper and probably more importantly, it allows results to be shared easily across entire organizations.<br><br>I have utilized this technology now on several projects and throughout that process have managed to bring it to a fairly mature state. It can be adapted to all kinds of data sources whether they be simulation / software generated, or actual field data and the GIS data can come from a number of sources as well.
+</p>
+
+
+
+
+
+
+
+
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Improving Operations Through Visualization</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Energy</div>
+    <div class="quarto-category">Visualization</div>
+    <div class="quarto-category">Wolfram Language</div>
+    <div class="quarto-category">Python</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How to improve insights into complicated onshore pipeline networks
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrew Yule </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 12, 2018</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -247,8 +302,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

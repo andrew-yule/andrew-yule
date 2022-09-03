@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  2018-10-12 Heat Maps
+ </title>
+ <link href="HTMLFiles/2018-10-12 Heat Maps.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Title">
+ Improving Operations Through Visualization
+</p>
+
+
+
+<p class="Subsection">
+ How do you understand thermal-hydraulic behavior in large pipeline networks?
+</p>
+
+
+
+<p class="Text">
+ This was the exact question I asked myself during some of the recent work we kicked off to look at a an onshore midstream hydrocarbon distribution network.<br /><br />Spending the majority of my time working on offshore fields, the technical challenges are obviously there, but the infrastructures you work with are generally pretty simple. A few wells tying into a manifold, followed by a single subsea tieback to a host facility is a typical scenario. Under those conditions, things like temperature and pressure can easily be visualized through profile plots of a particular pipeline like the one below.<br /><br /><span class="InputInline"><span><img src="HTMLFiles/2018-10-12 Heat Maps_1.gif" alt="2018-10-12 Heat Maps_1.gif" width="605" height="204" style="vertical-align:middle" /></span></span><br /><br />Compare that to onshore networks, and in particular, midstream companies operating networks, where you can end up with 100&rsquo;s of pipelines with numerous &ldquo;sources&rdquo; or feeds joining the system, and &ldquo;sinks&rdquo; or feeds leaving the system. Answering very specific questions about that network can be done, but getting an understanding of the entire system under certain scenarios is difficult.
+</p>
+
+
+
+<p class="Subsection">
+ Visualization to the rescue!
+</p>
+
+
+
+<p class="Text">
+ One of the best ways to understand data is to be able to visualize it. When that data is in the context of a geographical layout, then what I have come to realize is that the best approach to visualization should be something that embraces that geographical dependency. Enter heat maps.<br /><br /><span class="InputInline"><span><img src="HTMLFiles/2018-10-12 Heat Maps_2.gif" alt="2018-10-12 Heat Maps_2.gif" width="746" height="347" style="vertical-align:middle" /></span></span><br /><br />In the above examples, you can see a few of the visualizations created for some onshore pipeline networks looking at things like temperatures and pressures through a field. In most cases, the coloring of the lines allows for very clear picture of where in the system higher values are located. This helps to understand e.g. where bottlenecks might be which could be caused by insufficiently size pipes or excess flow that needs to be diverted.
+</p>
+
+
+
+<p class="Subsection">
+ General workflow
+</p>
+
+
+
+<p class="Text">
+ So what&rsquo;s required to make one of these? Well the fundamental process is actually fairly easy to understand, but like anything, the devil is in the details.<br /><br />First, we need a starting GIS file of some kind, which defines our coordinates (lat/longs) of the various pipelines. Next, we need a source of data describing the values we&rsquo;re interested in displaying for each of the pipelines. Finally, we need to take that data we&rsquo;re interested in viewing, create an overall scale for it (low to high), and then essentially transpose it with our GIS data.<br /><br />In terms of specifics, the diagram below shows the high-level technology stacks that make this possible. First, a GIS file is used to build a simulation. In my case this is typically PIPESIM, which has the benefits of a.) having built-in GIS support and b.) having a python API. The python API allows for information on the distances of each pipeline along with their coordinates to be extracted automatically. Next, I use the Wolfram Language&rsquo;s geo-related functions to scale my simulation data along the actual GIS coordinates of a particular pipeline. Finally, the generated data is written into a kml file as plain text where it may be viewed by 3rd party software or loaded back in to the Wolfram Language.<br /><span><span><img src="HTMLFiles/2018-10-12 Heat Maps_3.gif" alt="2018-10-12 Heat Maps_3.gif" width="591" height="502" style="vertical-align:middle" /></span></span>
+</p>
+
+
+
+<p class="Subsection">
+ Looking ahead
+</p>
+
+
+
+<p class="Text">
+ Numerous software (PIPESIM included) now have the ability to generate heat maps natively within their user interfaces. What&rsquo;s unique about this technology is that the end result is a kml file. This allows the heat map to be opened by numerous 3rd party pieces of software such as Google Earth and Global Mapper and probably more importantly, it allows results to be shared easily across entire organizations.<br /><br />I have utilized this technology now on several projects and throughout that process have managed to bring it to a fairly mature state. It can be adapted to all kinds of data sources whether they be simulation / software generated, or actual field data and the GIS data can come from a number of sources as well.
+</p>
+
+
+
+
+
+
+</body>
+
+</html>

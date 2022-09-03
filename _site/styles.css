@@ -13,7 +13,7 @@ h1 {
 
 h1.title {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 45px;
+    font-size: 0px;
     color: rgba(0, 0, 0, 1);
     font-style: normal;        
     -webkit-font-smoothing: antialiased;
@@ -78,6 +78,14 @@ p {
 a {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    font-style: normal;        
+    -webkit-font-smoothing: antialiased;
+  }
+
+.description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0px;
     color: rgba(0, 0, 0, 1);
     font-style: normal;        
     -webkit-font-smoothing: antialiased;
