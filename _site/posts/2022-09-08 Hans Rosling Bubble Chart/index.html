@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.163">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andrew Yule">
+<meta name="dcterms.date" content="2022-09-08">
+<meta name="description" content="Replicating a recent post showcasing R’s range and flexibility in Wolfram Language">
+
+<title>Andrew Yule - How to Create Hans Rosling’s Famous Animated Bubble Chart in Wolfram Language</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Andrew Yule</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">Posts</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../About.html">About</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Contact.html">Contact</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/ayule89/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/ayule89"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ayule89"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<!--?xml version="1.0" encoding="UTF-8"?-->
+
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+
+
+ <title>
+  2022-09-08 Hans Rosling Bubble Chart
+ </title>
+ <link href="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart.css" rel="stylesheet" type="text/css">
+
+
+
+
+<p class="Title">
+ How to Create Hans Rosling’s Famous Animated Bubble Chart in Wolfram Language
+</p>
+
+
+
+<p class="Text">
+ Last week, I came across an interesting <span><a href="https://levelup.gitconnected.com/how-to-create-hans-roslings-famous-animated-bubble-chart-in-r-e89607dbf73a"><span class="HyperlinkInline">Medium article</span></a></span> from a Data Science professional I follow. The post walked through creating Hans Rosling’s famous animated bubble chart from one of his <span><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen"><span class="HyperlinkInline">Ted Talks</span></a></span> regarding how economic prosperity increases life expectancy.
+</p>
+
+
+
+<p class="Text">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_1.gif" alt="2022-09-08 Hans Rosling Bubble Chart_1.gif" width="490" height="357" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ The article was interesting and helps to showcase the power of various programming languages. In this particular case, the author was utilizing R and cited it’s “range and flexibility”. His final result was an animated version of the ggplot shown below mimicking Rosling’s original above.
+</p>
+
+
+
+<p class="Text">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_2.gif" alt="2022-09-08 Hans Rosling Bubble Chart_2.gif" width="522" height="310" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ I love R, but love Wolfram Language even more. So, I wanted to try and show off Wolfram Language's capabilities in this area by re-creating his workflow.
+</p>
+
+
+
+<p class="Subsection">
+ Criteria
+</p>
+
+
+
+<p class="Text">
+ The author of the article noted some self-imposed criteria in his workflow:<br><br>1.&nbsp;&nbsp;&nbsp;&nbsp;Can I do it using economic data straight from the World Bank source, without needing to use local data files or package data which may not be up to date?<br>2.&nbsp;&nbsp;&nbsp;&nbsp;Can I make it look reasonably close to how Rosling’s chart looked?<br>3.&nbsp;&nbsp;&nbsp;&nbsp;Is it possible do to it in a single piped command in R?<br><br>I will attempt to follow the exact same criteria, with the exception to #3 where I will use “one line” of Wolfram Language code to create the graphic.
+</p>
+
+
+
+<p class="Subsection">
+ Grabbing the data
+</p>
+
+
+
+<p class="Text">
+ In the article, the author noted the use of a 3rd party library with immediate access to the world bank web API for extracting information. This is a really nice convenience, and one that isn’t quite available in that same form in the Wolfram Language. However, it is worth noting that the Wolfram Language does contain a rather comprehensive built-in knowledge database and in particular there are entries for Country data such as GDP per capita and population. Even life expectancy (the final main piece of information needed for this analysis) is available.<br><br>For the purposes of this analysis though, I wanted to keep with the Author’s intention of using the World Bank API, so for that we will utilize Wolfram Language’s URLExecute command, but first we need to acquire a list of countries we want to possibly grab information on.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_3.png" alt="2022-09-08 Hans Rosling Bubble Chart_3.png" width="360" height="19" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_4.png" alt="2022-09-08 Hans Rosling Bubble Chart_4.png" width="899" height="692" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ The World Bank API’s prefer to deal explicitly with 2 letter country codes when referencing a particular country, so for that I will again utilize Wolfram’s knowledge base first to generate that for each country.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_5.png" alt="2022-09-08 Hans Rosling Bubble Chart_5.png" width="872" height="50" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_6.png" alt="2022-09-08 Hans Rosling Bubble Chart_6.png" width="935" height="980" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Before getting any data on the particular countries, the last identifying piece of information we want for the plot later is the region of a particular country so that we can perform grouping within the plot. To get this, I’ll make a call to the World Bank API passing in the country code and then retrieving the reported region.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_7.png" alt="2022-09-08 Hans Rosling Bubble Chart_7.png" width="917" height="199" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ After deleting any countries that may have failed due to being unrecognized by the API, I will next plot the number of countries by region to ensure we have successfully retrieved the data as well as to get a sense for areas with the most countries.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_8.png" alt="2022-09-08 Hans Rosling Bubble Chart_8.png" width="739" height="122" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_9.gif" alt="2022-09-08 Hans Rosling Bubble Chart_9.gif" width="500" height="184" style="vertical-align:middle;" usemap="#map_9">
+<map name="map_9">
+<area shape="rect" coords="126,32,392,11" title="56" nohref="">
+<area shape="rect" coords="126,54,354,34" title="48" nohref="">
+<area shape="rect" coords="126,76,325,56" title="42" nohref="">
+<area shape="rect" coords="126,98,306,78" title="38" nohref="">
+<area shape="rect" coords="126,120,226,100" title="21" nohref="">
+<area shape="rect" coords="126,143,164,122" title="8" nohref="">
+<area shape="rect" coords="126,165,140,144" title="3" nohref="">
+</map>
+</p>
+
+<p class="Text">
+ The author of the original article provided the 3 indicators that we need to pass into the World Bank API in order to get our required information. Those are shown below and will provide us with Life Expectancy, GDP Per Capita, and Total Population.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_10.png" alt="2022-09-08 Hans Rosling Bubble Chart_10.png" width="560" height="19" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_11.png" alt="2022-09-08 Hans Rosling Bubble Chart_11.png" width="397" height="19" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ We’ll now use the World Bank’s API, passing in the above indicators and retrieving information for each country in our list from the years 1960 to 2000.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_12.png" alt="2022-09-08 Hans Rosling Bubble Chart_12.png" width="768" height="244" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Next, I’ll save the data so I don’t have to retrieve it via the API again if I close my work and pick back up later.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_13.png" alt="2022-09-08 Hans Rosling Bubble Chart_13.png" width="559" height="23" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Retrieving the data can then be performed using the Get[] function.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_14.png" alt="2022-09-08 Hans Rosling Bubble Chart_14.png" width="564" height="23" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Now we need to combine the data taking only the properties we’re interested in. Then, we’ll do some rearranging to get it into a more “tidy” format.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_15.png" alt="2022-09-08 Hans Rosling Bubble Chart_15.png" width="805" height="253" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Finally, the region information is the only parameters missing from what was extracted in the API calls, so I will add that back in manually.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_16.png" alt="2022-09-08 Hans Rosling Bubble Chart_16.png" width="666" height="74" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_17.png" alt="2022-09-08 Hans Rosling Bubble Chart_17.png" width="366" height="23" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_18.png" alt="2022-09-08 Hans Rosling Bubble Chart_18.png" width="754" height="44" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ After evaluation, I end up with the following clean data set for making my graphics.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_19.png" alt="2022-09-08 Hans Rosling Bubble Chart_19.png" width="394" height="23" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_20.png" alt="2022-09-08 Hans Rosling Bubble Chart_20.png" width="734" height="347" style="vertical-align:middle;" usemap="#map_20">
+<map name="map_20">
+<area shape="rect" coords="539,343,725,325" title="Unless you store the data (16 MB), it will not be available when you quit the kernel." nohref="">
+</map>
+</p>
+
+<p class="Subsection">
+ Creating a static chart for a single year
+</p>
+
+
+
+<p class="Text">
+ Next, I’ll create a function capable of being passed a single year and creating a graphic showing the GDP per capita on the x-axis (plotted on a log scale) and the life expectancy on the y-axis where the size of the bubbles is used to indicate the countries population.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_21.png" alt="2022-09-08 Hans Rosling Bubble Chart_21.png" width="873" height="470" style="vertical-align:middle">
+</p>
+
+<p class="Text">
+ Here are examples of the function in action below.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_22.gif" alt="2022-09-08 Hans Rosling Bubble Chart_22.gif" width="144" height="44" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_23.gif" alt="2022-09-08 Hans Rosling Bubble Chart_23.gif" width="600" height="426" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_24.gif" alt="2022-09-08 Hans Rosling Bubble Chart_24.gif" width="600" height="426" style="vertical-align:middle">
+</p>
+
+<p class="Subsection">
+ Animating the chart
+</p>
+
+
+
+<p class="Text">
+ With a single function (and line of code) we are now able to make a plot for a particular year, the only remaining step is to create all the plots across all the years and then export the resulting images as a GIF!
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_25.png" alt="2022-09-08 Hans Rosling Bubble Chart_25.png" width="338" height="19" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_26.png" alt="2022-09-08 Hans Rosling Bubble Chart_26.png" width="162" height="19" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_27.gif" alt="2022-09-08 Hans Rosling Bubble Chart_27.gif" width="644" height="504" style="vertical-align:middle">
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_28.png" alt="2022-09-08 Hans Rosling Bubble Chart_28.png" width="383" height="23" style="vertical-align:middle">
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/2022-09-08 Hans Rosling Bubble Chart_29.png" alt="2022-09-08 Hans Rosling Bubble Chart_29.png" width="234" height="19" style="vertical-align:middle">
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+
+
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to Create Hans Rosling’s Famous Animated Bubble Chart in Wolfram Language</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Wolfram Language</div>
+    <div class="quarto-category">Visualization</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Replicating a recent post showcasing R’s range and flexibility in Wolfram Language
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrew Yule </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 8, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

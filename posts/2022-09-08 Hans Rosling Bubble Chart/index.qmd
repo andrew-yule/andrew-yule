@@ -1,0 +1,12 @@
+---
+title: "How to Create Hans Rosling's Famous Animated Bubble Chart in Wolfram Language"
+description: "Replicating a recent post showcasing R's range and flexibility in Wolfram Language"
+author: "Andrew Yule"
+date: "2022-09-08"
+categories: [Wolfram Language, Visualization]
+image: "hans_rosling.gif"
+title-block-banner: false
+format: 
+    html: 
+        include-before-body: "2022-09-08 Hans Rosling Bubble Chart.htm"
+---
